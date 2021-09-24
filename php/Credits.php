@@ -8,7 +8,8 @@
   <section class="main" id="s1">
     <div>
 
-      <h2>DATOS DEL AUTOR/AUTORES</h2>
+      <h2>Tserenlkham Undrakh
+	       Ingeniería de Software</h2>
 
     </div>
   </section>
