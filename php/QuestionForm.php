@@ -9,7 +9,7 @@
   <section class="main" id="s1">
     <div>
 	
-<form id='fquestion' name='fquestion'  >
+<form id='fquestion' name='fquestion'  METHOD ="GET" ACTION = "AddQuestion.php">
 
 Email*:
 <input type = "text" id= "email" name = "email" size ="40">
@@ -39,15 +39,19 @@ Complejidad*:
 Tema (subject)*:
 <input type = "text" id= "tema" name = "tema">
 <br>
-<input type = "submit" onSubmit = "return verificar();" id= "botonEnviar" name = "boton" value ="Enviar Solicitud">
+
+<input type = "submit"  id= "botonEnviar" name = "boton" value ="Enviar Solicitud">
 
 </form>
 
 
     </div>
   </section>
-  <?php include '../html/Footer.html' ?>
- <script src = 'ValidateFieldsQuestionJS.js'></script>
+  <?php include '../html/Footer.html'  /*
+ */?>
+  <script src = 'jquery-3.4.1.min.js'></script>
+ <script src = 'ValidateFieldsQuestionJQ.js'></script>
+ 
  
 </body>
 </html>

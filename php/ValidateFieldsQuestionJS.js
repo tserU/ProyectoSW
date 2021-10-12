@@ -1,59 +1,77 @@
 
 
 
-//function verificar()
-//{
-/*var nombre = document.formulario.nombre.value;
-var grupo = document.formulario.grupo.value;*/
 
-//var form = document.form;
 var form = document.getElementById('fquestion');
 form.addEventListener('submit',function(event)
 {
-	event.preventDefault();
+document.getElementById("botonEnviar").onclick = verificar()
+
+function verificar(){
+
 if (email.value ===null|| email.value === '' )
 {
+	
 alert("La dirección de correo no puede estar vacía");
-//return false;
+event.preventDefault();
+
 }
-if (form.enunciado.value ==null || enunciado.value == '')
+let r =/[A-Za-z ]*/
+else if(!r.test(email.value)){	
+event.preventDefault();
+	alert("El email no es correcto");
+
+}
+else if (form.enunciado.value ==null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos1");
-//return false;
+
+
 }
 
-if (form.correcta.value == null || enunciado.value == '')
+else if (form.correcta.value == null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos2");
-//return false;
+
 }
 
-if (form.incorrecta1.value == null || enunciado.value == '')
+else if (form.incorrecta1.value == null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos3");
-//return false;
+
 }
-if (form.incorrecta2.value == null || enunciado.value == '')
+else if (form.incorrecta2.value == null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos4");
-//return false;
+
 }
-if (form.incorrecta3.value == null || enunciado.value == '')
+else if (form.incorrecta3.value == null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos5");
-//return false;
+
 }
-if (form.complejidad.value == null || enunciado.value == '')
+else if (form.complejidad.value == null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos6");
-//return false;
+
 }
-if (form.tema.value== null || enunciado.value == '')
+else if (form.tema.value== null || enunciado.value == '')
 {
+	event.preventDefault();
 alert("Campos obligatorios vacíos7");
-//return false;
+
 }
-//return true;
-});
+else{
+	event.preventDefault();
+	alert("enviar");
+}
+
+};
 
 
