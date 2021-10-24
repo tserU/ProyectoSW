@@ -43,7 +43,7 @@
 	  
 	  <?php
  
- 
+    include 'DbConfig.php';
 
     function validarEmail(){
 		$error = "";
@@ -115,7 +115,7 @@
 		$nombre=$_POST['nombre'];
 		$pass1=$_POST['pass'];
 		if($errores ==''&&$errores2==''&&$errores3==''){
-			$mysqli = mysqli_connect ("localhost", "root", "", "quiz");
+			$mysqli = mysqli_connect ($server, $user, $pass, $basededatos);
 			$sql = "insert into usuarios (TipoUsuario,Email,NombreApellidos,Password) 
 			values ( '$tipo' , '$email','$nombre','$pass1')";
 			if (!$mysqli)

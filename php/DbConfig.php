@@ -1,4 +1,5 @@
 <?php
+
 $local=0; //0 para la nube
 if ($local==1){
     $server="localhost";
@@ -12,4 +13,6 @@ else{
     $pass="3o5zj9cQIHitH";
     $basededatos="db_G28";
 }
+
+
 ?>

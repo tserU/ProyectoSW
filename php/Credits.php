@@ -8,7 +8,7 @@
   <section class="main" id="s1">
     <div>
 
-      <h2>Tserenlkham Undrakh
+      <h2>Tserenlkham Undrakh <br>
 	       Ingeniería de Software</h2>
 
     </div>

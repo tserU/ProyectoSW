@@ -7,10 +7,10 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
-      Código PHP para mostrar una tabla con las preguntas de la BD.<br>
-      La tabla no incluye las imágenes
+   
 	  <?php
-	  $link = mysqli_connect ("localhost", "G28", "3o5zj9cQIHitH", "db_G28");
+	  include 'DbConfig.php';
+	  $link = mysqli_connect ("localhost", "root", "", "quiz");
       $usuarios = mysqli_query($link, "select email,enunciado,RespuestaCorrecta from preguntas" );
       echo '<table border=1> <tr> <th> AUTOR </th> 
       <th>ENUNCIADO</th> <th>RESPUESTA CORRECTA</th> </tr>';

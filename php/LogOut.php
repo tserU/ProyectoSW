@@ -14,7 +14,8 @@
 
 
 <?php 
-
+session_start();
+$_SESSION['sesion'] = false;
 echo ("<script>alert('HASTA PRONTO')</script>");
 
 ?>

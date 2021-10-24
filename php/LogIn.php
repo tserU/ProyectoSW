@@ -36,9 +36,11 @@
       </form>  
 	  
 	<?php
+	include 'DbConfig.php';
 	if (isset($_POST['email'])){
 		
-	$mysql= mysqli_connect("localhost","root","","quiz") or
+
+	$mysql= mysqli_connect($server, $user, $pass, $basededatos) or
 	die(mysqli_connect_error());
 	
 	$username=$_POST['email']; 
@@ -47,11 +49,15 @@
 	$usuarios = mysqli_query( $mysql,"select * from usuarios where Email ='$username' and
 	Password ='$pass'");
 	
-	$cont= mysqli_num_rows($usuarios);
-	mysqli_close( $mysql); 
+	$cont= mysqli_num_rows($usuarios); 
+	mysqli_close( $mysql);
 	if($cont==1){
 		echo("<script> alert ('BIENVENIDO AL SISTEMA:". $username . "')</script>");
 	echo ("Login correcto<p><a href=‘Layout.php'>Puede insertar preguntas</a>");
+	
+	session_start();
+	$_SESSION['sesion'] = true;
+	
 	header('location: Layout.php');}
 	else {echo
 	("Par&aacute;metros de login incorrectos ");}

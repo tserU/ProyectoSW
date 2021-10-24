@@ -1,53 +1,77 @@
-<SCRIPT LANGUAGE="JavaScript">
-“ código JavaScript”
-function verificar()
+
+
+
+
+var form = document.getElementById('fquestion');
+form.addEventListener('submit',function(event)
 {
-/*var nombre = document.formulario.nombre.value;
-var grupo = document.formulario.grupo.value;*/
-var form = document.form;
-if (form.email.value ==null )
+document.getElementById("botonEnviar").onclick = verificar()
+
+function verificar(){
+
+if (email.value ===null|| email.value === '' )
 {
-alert("Error en el email");
-return false;
+	
+alert("La dirección de correo no puede estar vacía");
+event.preventDefault();
+
 }
-if (form.enunciado.value ==null)
+let r =/[A-Za-z ]*/
+else if(!r.test(email.value)){	
+event.preventDefault();
+	alert("El email no es correcto");
+
+}
+else if (form.enunciado.value ==null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos1");
+
+
 }
 
-if (form.correcta.value == null)
+else if (form.correcta.value == null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos2");
+
 }
 
-if (form.incorrecta1.value == null)
+else if (form.incorrecta1.value == null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos3");
+
 }
-if (form.incorrecta2.value == null)
+else if (form.incorrecta2.value == null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos4");
+
 }
-if (form.incorrecta3.value == null)
+else if (form.incorrecta3.value == null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos5");
+
 }
-if (form.complejidad.value == null)
+else if (form.complejidad.value == null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos6");
+
 }
-if (form.tema.value== null)
+else if (form.tema.value== null || enunciado.value == '')
 {
-alert("Error en el identificador de grupo");
-return false;
+	event.preventDefault();
+alert("Campos obligatorios vacíos7");
+
 }
-return true;
+else{
+	event.preventDefault();
+	alert("enviar");
 }
 
-</SCRIPT>
+};
+
+

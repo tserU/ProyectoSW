@@ -47,10 +47,10 @@ Tema (subject)*:
 
     </div>
   </section>
-  <?php include '../html/Footer.html'  /*
- */?>
-  <script src = 'jquery-3.4.1.min.js'></script>
- <script src = 'ValidateFieldsQuestionJQ.js'></script>
+  <?php include '../html/Footer.html'  
+ ?>
+  <script src = '../js/jquery-3.4.1.min.js'></script>
+ <script src = '../js/ValidateFieldsQuestionJQ.js'></script>
  
  
 </body>
